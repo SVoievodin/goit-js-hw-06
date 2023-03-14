@@ -22,7 +22,7 @@ for (let i = 0; i < images.length; i++) {
   liImgEl.appendChild(imgEl);
   imgEl.src = images[i].url;
   imgEl.alt = images[i].alt;
-  imgEl.height = 100;
+  imgEl.height = 200;
   galleryEl.insertAdjacentHTML("afterbegin", `${liImgEl.innerHTML}`)
 }
 console.log(galleryEl);

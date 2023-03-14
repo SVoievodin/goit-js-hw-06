@@ -11,9 +11,12 @@ const counter = {
 incrEl.addEventListener('click', () => {
     counter.incrFn();
     valueEl.textContent = counter.value;
+    console.log(counter.value);
 });
+
 decrEl.addEventListener('click', () => {
     counter.decrFn();
     valueEl.textContent = counter.value;
+    console.log(counter.value);
 });
 
