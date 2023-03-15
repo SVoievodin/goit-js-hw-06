@@ -3,7 +3,7 @@ const inputRef = document.querySelector('#validation-input');
 
 function validate(event) {
     if (event.currentTarget.value.length != inputRef.dataset.length)
-        return inputRef.classList.add('invalid') || inputRef.classList.remove('valid')
+        return inputRef.classList.add('invalid') || inputRef.classList.remove('valid');
     inputRef.classList.replace('invalid', 'valid');
     // console.log(event.currentTarget.value.length)
 }
