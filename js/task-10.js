@@ -14,6 +14,7 @@ createBtb.addEventListener('click', createFn);
 destroyBtn.addEventListener('click', () => boxes.innerHTML = '');
 
 function createFn() {
+  boxes.innerHTML = '';
   for (let i = 0; i < input.value; i++) {
     const box = document.createElement('div');
 

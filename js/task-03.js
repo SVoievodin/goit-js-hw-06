@@ -13,17 +13,24 @@ const images = [
   },
 ];
 
-const galleryEl = document.querySelector("ul.gallery");
-galleryEl.style.display = "flex";
+const gallery = document.querySelector("ul.gallery");
+gallery.style.display = "flex";
 
-for (let i = 0; i < images.length; i++) {
-  let liImgEl = document.createElement("li");
-  let imgEl = document.createElement("img");
-  liImgEl.appendChild(imgEl);
-  imgEl.src = images[i].url;
-  imgEl.alt = images[i].alt;
-  imgEl.height = 200;
-  galleryEl.insertAdjacentHTML("afterbegin", `${liImgEl.innerHTML}`)
-}
-console.log(galleryEl);
+const imgList = images.map(image => `<li style="list-style-type: none;"><img style="display: block; margin: 5px;" src="${image.url}" alt="${image.alt}" height = "200"</li>`).join('');
+console.log(imgList);
+
+gallery.insertAdjacentHTML("afterbegin", imgList);
+
+
+
+// for (let i = 0; i < images.length; i++) {
+//   let liImgEl = document.createElement("li");
+//   let imgEl = document.createElement("img");
+//   liImgEl.appendChild(imgEl);
+//   imgEl.src = images[i].url;
+//   imgEl.alt = images[i].alt;
+//   imgEl.height = 200;
+//   gallery.insertAdjacentHTML("afterbegin", imgList)
+// }
+// console.log(galleryEl);
 
